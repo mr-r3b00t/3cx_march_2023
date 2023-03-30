@@ -7,4 +7,6 @@ search in (DeviceFileEvents, DeviceImageLoadEvents, DeviceNetworkEvents)
 TimeGenerated > ago(timeframe)
 | where InitiatingProcessSHA1 has_any ("cad1120d91b812acafef7175f949dd1b09c6c21a","bf939c9c261d27ee7bb92325cc588624fca75429","20d554a80d759c50d6537dd7097fed84dd258b3e")
 | where InitiatingProcessSHA256 has_any ("aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868", "59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983", "c485674ee63ec8d4e8fde9800788175a8b02d3f9416d0e763360fff7f8eb4e02","7986bbaee8940da11ce089383521ab420c443ab7b15ed42aed91fd31ce833896", "11be1803e2e307b647a8a7e02d128335c448ff741bf06bf52b332e0bbf423b03", "4e08e4ffc699e0a1de4a5225a0b4920933fbb9cf123cde33e1674fde6d61444f")
-| project TimeGenerated, DeviceName, InitiatingProcessAccountName, InitiatingProcessCommandLine,InitiatingProcessFileName
+| where InitiatingProcessFileName contains "3cxdesktopapp"
+| where FileName has_any ("d3dcompiler_47.dll", "ffmpeg.dll")
+| project TimeGenerated, DeviceName, InitiatingProcessAccountName, InitiatingProcessCommandLine,InitiatingProcessFileName, FileName
