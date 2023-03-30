@@ -5,7 +5,7 @@
 // PwnDefend the Planet!
 let timeframe = (90d);
 let domainlist = materialize (
-(externaldata(domain: string ) [@"https://raw.githubusercontent.com/mr-r3b00t/3cx_march_2023/main/domains.txt"]
+(externaldata(domain: string ) [@"https://github.com/JakeSecR3/3cx_march_2023/blob/main/domains.txt"]
 with (format="txt"))
 | project domain
 | summarize by domain);

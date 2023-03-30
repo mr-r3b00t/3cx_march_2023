@@ -1,3 +1,8 @@
+// Check PwnDefend github for 3cx domains
+// created by mRr3b00t
+// inspired by stripesoc's example! thanks frens!
+// version 0.1
+// PwnDefend the Planet!
 let timeframe = (90d);
 DeviceNetworkEvents
 | where Timestamp < ago(timeframe)
