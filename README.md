@@ -36,8 +36,13 @@ https://reddit.com/r/crowdstrike/comments/125r3uu/20230329_situational_awareness
 
 Disclaimer: **VX-UNDERGROUND SAMPLE LINK CONTAINS MALWARE BROWSE AT YOUR OWN RISK**
 
-Direct Windows Samples:
+Windows sample analysis:
+
+https://news.sophos.com/en-us/2023/03/29/3cx-dll-sideloading-attack/
+
+Direct Windows samples:
 - ```https://share.vx-underground.org/SmoothOperator.7z```
+
 
 MacOS sample analysis:
 
