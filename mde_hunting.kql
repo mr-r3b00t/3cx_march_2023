@@ -1,0 +1,17 @@
+// Check PwnDefend github for 3cx domains
+// Not tested as I don't have access to MDE client with activity
+// created by mRr3b00t
+// inspired by stripesoc's example! thanks frens!
+// version 0.1
+// PwnDefend the Planet!
+let timeframe = (90d);
+let domainlist = materialize (
+(externaldata(domain: string ) [@"https://github.com/mr-r3b00t/3cx_march_2023/blob/main/domains.txt"]
+with (format="txt"))
+| project domain
+| summarize by domain);
+search in (DeviceNetworkEvents, DeviceFileEvents, DeviceEvents)
+Timestamp > ago(timeframe)
+| where RemoteUrl != ""
+| where (RemoteUrl in(domainlist))
+| project Timestamp, DeviceName, RemoteIP, RemoteUrl, RemoteIPType, RemotePort, ActionType
