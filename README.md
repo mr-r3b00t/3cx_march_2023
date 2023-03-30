@@ -4,8 +4,9 @@ Forked with love by R3.
 
 ## News and Updates
 
-### IOC searches with artifacts provided by SentinelOne
+### IOC searches with artifacts provided by SentinelOne and Sophos
 https://www.sentinelone.com/blog/smoothoperator-ongoing-campaign-trojanizes-3cx-software-in-software-supply-chain-attack/
+https://github.com/sophoslabs/IoCs/blob/master/3CX%20IoCs%202023-03.csv
 
 ### Update from CS:
 https://reddit.com/r/crowdstrike/comments/125r3uu/20230329_situational_awareness_crowdstrike/
